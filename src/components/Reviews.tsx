@@ -81,7 +81,7 @@ const Reviews = () => {
 
         {/* Reviews Carousel */}
         <div className="relative">
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {visibleReviews.map((review, index) => (
               <div
                 key={`${review.id}-${index}`}

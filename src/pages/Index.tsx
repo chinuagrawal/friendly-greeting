@@ -20,7 +20,7 @@ const Index = () => {
         <meta name="keywords" content="library, study space, book seat, AC library, student library, study room" />
       </Helmet>
       
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background overflow-x-hidden">
         <Navbar />
         <main>
           <Hero />
