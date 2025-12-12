@@ -43,7 +43,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Cards */}
           <div className="space-y-6">
             {contactInfo.map((item, index) => (
@@ -52,16 +52,16 @@ const Contact = () => {
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-4 bg-card p-6 rounded-xl shadow-lg border border-border/50 hover-lift group"
+                className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-card p-4 sm:p-6 rounded-xl shadow-lg border border-border/50 hover-lift group"
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                  <item.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors flex-shrink-0">
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <p className="text-sm text-muted-foreground">{item.label}</p>
-                  <p className="font-semibold text-card-foreground">{item.value}</p>
+                  <p className="font-semibold text-card-foreground truncate">{item.value}</p>
                 </div>
-                <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors">
+                <Button variant="outline" size="sm" className="w-full sm:w-auto group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors">
                   {item.action}
                 </Button>
               </a>
@@ -103,7 +103,7 @@ const Contact = () => {
           </div>
 
           {/* Map */}
-          <div className="bg-card rounded-xl shadow-lg overflow-hidden h-[500px]">
+          <div className="bg-card rounded-xl shadow-lg overflow-hidden h-[300px] sm:h-[400px] lg:h-[500px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0175!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnNDAuNiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
               width="100%"
