@@ -10,13 +10,13 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/95 to-primary/20" />
       
       {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float hidden md:block" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl hidden md:block" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -99,7 +99,7 @@ const Hero = () => {
             </div>
 
             {/* Floating card */}
-            <div className="absolute -top-4 -right-4 p-4 bg-card rounded-xl shadow-xl animate-float">
+            <div className="absolute -top-4 right-0 md:-right-4 p-4 bg-card rounded-xl shadow-xl animate-float">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
                   <span className="text-2xl">📚</span>

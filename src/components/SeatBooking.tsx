@@ -210,9 +210,9 @@ const SeatBooking = () => {
 
           {/* Seat Map */}
           <div className="lg:col-span-2 bg-card p-6 rounded-xl shadow-lg">
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
               <h3 className="font-semibold text-card-foreground">Seat Map</h3>
-              <div className="flex gap-4 text-sm">
+              <div className="flex flex-wrap gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <Wind className="w-4 h-4 text-primary" />
                   <span className="text-muted-foreground">AC Zone (1-20)</span>
